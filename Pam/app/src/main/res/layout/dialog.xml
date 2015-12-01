@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/other_bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/dialog_background"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/add_payment"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/edittext"
+            android:ems="10"
+            android:hint="@string/credit_card"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="#efeff4" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/edittext"
+            android:ems="10"
+            android:hint="@string/name_on_card"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="#efeff4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="360"
+                android:background="@mipmap/edittext"
+                android:ems="10"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/date_format"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="#efeff4" />
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="360"
+                android:background="@mipmap/edittext"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="#efeff4"
+                android:hint="@string/cvc_cw" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="360"
+                android:background="@mipmap/edittext" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="360"
+                android:background="@mipmap/edittext"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="#efeff4"
+                android:hint="@string/post_code" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/other_bg"
+            android:src="@drawable/btn_add_payment" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/cancel_Imagebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/other_bg"
+        android:src="@drawable/btn_cancel_selector" />
+
+</FrameLayout>

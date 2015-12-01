@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Pam</string>
+    <string name="register">REGISTER</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_password">Re-type Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user_name">Username</string>
+    <string name="sign_in_big">SIGN IN</string>
+    <string name="social_account">OR SIGN IN WITH A SOCIAL ACCOUNT</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">No Account?</string>
+    <string name="sign_up_small">Sign Up</string>
+    <string name="action_settings">Settings</string>
+    <string name="city">MONTREAL</string>
+    <string name="notifications">Notifications</string>
+    <string name="help">How can we\nhelp you!?</string>
+    <string name="request">My Requests</string>
+    <string name="need">I need\u2026</string>
+    <string name="select_city">Select City</string>
+    <string name="select_category">Select Category</string>
+    <string name="exit_message">Do you want exit PAM?</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="edit">Edit</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="info">INFO</string>
+    <string name="big_first_name">FIRST NAME*</string>
+    <string name="big_last_name">LAST NAME*</string>
+    <string name="gender">GENDER</string>
+    <string name="birthday">DATE OF BIRTH</string>
+    <string name="company">COMPANY</string>
+    <string name="profession">PROFESSION</string>
+    <string name="phone">PHONE</string>
+    <string name="mobile">MOBILE</string>
+    <string name="work">WORK</string>
+    <string name="payment">PAYMENT</string>
+    <string name="no_cards">NO CARDS</string>
+    <string name="big_add">ADD</string>
+    <string name="gender_prompt"> </string>
+    <string name="add_payment">ADD CARD</string>
+    <string name="credit_card">Credit card number</string>
+    <string name="name_on_card">Name on card</string>
+    <string name="cvc_cw">CVC/CW</string>
+    <string name="post_code">Post code</string>
+    <string name="date_format">MM/YYYY</string>
+    <string name="restaurant">I need a restaurant reservation for a Business\nMeeting, tomorrow night!\nThank you!</string>
+    <string name="restaurant_date">Date : July 8th Status : In Process\nDate : August 24,2015</string>
+    <string name="greeting">Hi Pam,\nI would suggest Lemac Restaurant. They have amazing salads, and it is perfect for a business meeting.</string>
+    <string name="greeting_1">Let me know what do you think! And do not hesistate if you have more questions!</string>
+    <string name="rating">You have been served\nby Elyes B. Please rate the service!</string>
+
+    <string-array name="navDrawerItems">
+        <item>HOME</item>
+        <item>REQUESTS</item>
+        <item>NOTIFICATIONS</item>
+        <item>EVENTS</item>
+        <item>PROFILE</item>
+        <item>SETTINGS</item>
+        <item>LOG OUT</item>
+    </string-array>
+
+    <string-array name="select_city">
+        <item>Select City</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+    </string-array>
+
+    <string-array name="select_category">
+        <item>Select Category</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+        <item>MONTREAL</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item> </item>
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>Category</item>
+        <item>Personal</item>
+        <item>Business</item>
+    </string-array>
+
+    <string-array name="navDrawerIcons">
+        <item>@mipmap/home</item>
+        <item>@mipmap/requests</item>
+        <item>@mipmap/bell</item>
+        <item>@mipmap/event</item>
+        <item>@mipmap/user</item>
+        <item>@mipmap/setting</item>
+        <item>@mipmap/logout</item>
+    </string-array>
+</resources>
