@@ -54,14 +54,14 @@
             android:id="@+id/first_name_et"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="145"
+            android:background="@mipmap/edittext"
             android:ems="10"
             android:hint="@string/first_name"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:background="@mipmap/edittext"
-            android:layout_weight="145" />
+            android:textColorHint="#ffffff" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -73,14 +73,14 @@
             android:id="@+id/last_name_et"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="145"
+            android:background="@mipmap/edittext"
             android:ems="10"
             android:hint="@string/last_name"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:background="@mipmap/edittext"
-            android:layout_weight="145" />
+            android:textColorHint="#ffffff" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -92,14 +92,14 @@
             android:id="@+id/email_et"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="145"
+            android:background="@mipmap/edittext"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:background="@mipmap/edittext"
-            android:layout_weight="145" />
+            android:textColorHint="#ffffff" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -111,14 +111,14 @@
             android:id="@+id/password_et"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="145"
+            android:background="@mipmap/edittext"
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:background="@mipmap/edittext"
-            android:layout_weight="145" />
+            android:textColorHint="#ffffff" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -130,14 +130,14 @@
             android:id="@+id/retype_et"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="145"
+            android:background="@mipmap/edittext"
             android:ems="10"
             android:hint="@string/re_password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:background="@mipmap/edittext"
-            android:layout_weight="145" />
+            android:textColorHint="#ffffff" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -145,13 +145,15 @@
             android:layout_weight="130"
             android:orientation="vertical" />
 
-        <ImageButton
+        <Button
             android:id="@+id/sign_up_button"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="170"
-            android:src="@drawable/btn_signup_selector"
-            android:background="@mipmap/other_bg" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            android:text="SIGN UP"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -163,8 +165,8 @@
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="60"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -180,13 +182,14 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#ffffff" />
 
-            <ImageButton
+            <TextView
                 android:id="@+id/signin_button"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="150"
-                android:src="@drawable/btnsign_in_selector"
-                android:background="@mipmap/other_bg" />
+                android:gravity="center"
+                android:text="Sign in"
+                android:textColor="#27ccc0" />
 
             <LinearLayout
                 android:layout_width="0dp"

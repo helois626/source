@@ -7,8 +7,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.ally.pam.R;
 
@@ -23,8 +25,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     private EditText etPassword;
     private EditText etRetype;
 
-    private ImageButton btnSignUp;
-    private ImageButton btnSignIn;
+    private Button btnSignUp;
+    private TextView btnSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     }
 
     private void initUI() {
-        btnSignUp = (ImageButton) findViewById(R.id.sign_up_button);
-        btnSignIn = (ImageButton) findViewById(R.id.signin_button);
+        btnSignUp = (Button) findViewById(R.id.sign_up_button);
+        btnSignIn = (TextView) findViewById(R.id.signin_button);
         btnSignUp.setOnClickListener(this);
         btnSignIn.setOnClickListener(this);
     }

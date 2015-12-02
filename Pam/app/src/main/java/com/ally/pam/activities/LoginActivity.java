@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.ally.pam.R;
 
@@ -16,10 +18,9 @@ import com.ally.pam.R;
  */
 public class LoginActivity extends Activity implements View.OnClickListener{
 
-    private ImageButton btnSignin;
-    private ImageButton btnSignup;
+    private Button btnSignin;
+    private TextView btnSignup;
     private ImageButton btnLinked;
-    private ImageButton btnForgot;
 
     private EditText etUsername;
     private EditText etPassword;
@@ -36,12 +37,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     private void initUI() {
-        btnSignin = (ImageButton) findViewById(R.id.lgbtn_signin);
-        btnSignup = (ImageButton) findViewById(R.id.lgbtn_signup);
-        btnForgot = (ImageButton) findViewById(R.id.btnforgot);
+        btnSignin = (Button) findViewById(R.id.lgbtn_signin);
+        btnSignup = (TextView) findViewById(R.id.signup_textview);
         btnSignin.setOnClickListener(this);
         btnSignup.setOnClickListener(this);
-        btnForgot.setOnClickListener(this);
 
         etUsername = (EditText) findViewById(R.id.etusername);
         etPassword = (EditText) findViewById(R.id.etpassword);
@@ -57,7 +56,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 finish();
                 break;
 
-            case R.id.lgbtn_signup:
+            case R.id.signup_textview:
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(i);
                 finish();

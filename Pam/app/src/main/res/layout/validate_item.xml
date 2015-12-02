@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:text="PERSONAL"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textStyle="bold"
+        android:textColor="#8a000000" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/pay_imageview"
+        android:src="@mipmap/visa_card"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/cost_imageview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="*****999"
+        android:textColor="#8a000000" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

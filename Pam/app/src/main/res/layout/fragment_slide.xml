@@ -138,14 +138,18 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="360"
-                    android:background="@mipmap/pay_button" />
+                    android:background="@mipmap/pay_button"
+                    android:text="CHAT"
+                    android:textColor="@color/textColorPrimary" />
 
                 <Button
                     android:id="@+id/request_chat_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="365"
-                    android:background="@mipmap/chat_button" />
+                    android:background="@mipmap/chat_button"
+                    android:text="VALIDATE"
+                    android:textColor="#8e8d8d" />
             </LinearLayout>
 
         </LinearLayout>

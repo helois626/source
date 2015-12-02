@@ -55,6 +55,7 @@
     <string name="greeting">Hi Pam,\nI would suggest Lemac Restaurant. They have amazing salads, and it is perfect for a business meeting.</string>
     <string name="greeting_1">Let me know what do you think! And do not hesistate if you have more questions!</string>
     <string name="rating">You have been served\nby Elyes B. Please rate the service!</string>
+    <string name="onboarding">We are a concierge Service designed\nto answer to all your needs right\nfrom your phone.</string>
 
     <string-array name="navDrawerItems">
         <item>HOME</item>

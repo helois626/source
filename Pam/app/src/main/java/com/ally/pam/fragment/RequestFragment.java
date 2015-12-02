@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -19,7 +20,7 @@ import com.ally.pam.adapter.RequestListAdapter;
  */
 public class RequestFragment extends Fragment implements View.OnClickListener {
 
-    private ImageButton ibtnAddNew;
+    private Button ibtnAddNew;
 
     private ListView lvRequest;
 
@@ -37,7 +38,7 @@ public class RequestFragment extends Fragment implements View.OnClickListener {
 
         View rootView = inflater.inflate(R.layout.fragment_requests, container, false);
 
-        ibtnAddNew = (ImageButton) rootView.findViewById(R.id.ibtn_add_new);
+        ibtnAddNew = (Button) rootView.findViewById(R.id.ibtn_add_new);
         ibtnAddNew.setOnClickListener(this);
 
         lvRequest = (ListView) rootView.findViewById(R.id.request_listview);

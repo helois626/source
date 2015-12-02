@@ -9,15 +9,18 @@
         android:id="@+id/request_listview"
         android:layout_above="@+id/ibtn_add_new" />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ibtn_add_new"
-        android:background="@mipmap/other_bg"
-        android:src="@drawable/btn_add_new_selector"
+        android:background="@drawable/btn_selector"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:text="ADD A REQUEST"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

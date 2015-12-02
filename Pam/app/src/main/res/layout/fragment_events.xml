@@ -3,21 +3,33 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView14"
+        android:background="@mipmap/events_nothing" />
+
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/event_listview"
         android:layout_above="@+id/ibtn_add_new"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/imageView14"
+        android:divider="@null" />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ibtn_add_new"
-        android:background="@mipmap/other_bg"
-        android:src="@drawable/btn_add_new_selector"
+        android:background="@drawable/btn_selector"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="ADD A REQUEST" />
 
 </RelativeLayout>

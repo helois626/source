@@ -12,9 +12,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.ally.pam.R;
 import com.ally.pam.activities.ChatActivity;
+import com.ally.pam.adapter.PaymentAdapter;
 
 /**
  * Created by Ally on 12/1/2015.
@@ -47,7 +49,13 @@ public class SlidePageFragment extends Fragment {
     private Button btnPay;
     private Button btnChat;
 
+    private ListView lvPayment;
+
     private ImageButton imageButton;
+
+    private String[] NAME = {"PERSONAL", "WORK"};
+    private String[] COST = {"*****999", "*****999"};
+    private int[] IMAGE = {R.mipmap.visa_card, R.mipmap.credit_card};
 
     public SlidePageFragment() {
     }
@@ -84,8 +92,8 @@ public class SlidePageFragment extends Fragment {
             }
         });
 
-        btnPay = (Button) rootView.findViewById(R.id.request_pay_button);
-        btnPay.setOnClickListener(new View.OnClickListener() {
+        btnChat = (Button) rootView.findViewById(R.id.request_chat_button);
+        btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(getActivity());
@@ -99,12 +107,14 @@ public class SlidePageFragment extends Fragment {
                         dialog.dismiss();
                     }
                 });
+                lvPayment = (ListView) dialog.findViewById(R.id.pay_listview);
+                lvPayment.setAdapter(new PaymentAdapter(getActivity().getApplicationContext(), NAME, IMAGE, COST));
                 dialog.show();
             }
         });
 
-        btnChat = (Button) rootView.findViewById(R.id.request_chat_button);
-        btnChat.setOnClickListener(new View.OnClickListener() {
+        btnPay = (Button) rootView.findViewById(R.id.request_pay_button);
+        btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent chat = new Intent(getActivity().getBaseContext(), ChatActivity.class);

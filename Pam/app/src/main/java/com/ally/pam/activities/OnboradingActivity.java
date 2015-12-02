@@ -1,9 +1,15 @@
 package com.ally.pam.activities;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -14,27 +20,29 @@ import android.widget.ImageView;
 import android.widget.Gallery.LayoutParams;
 
 import com.ally.pam.R;
+import com.ally.pam.fragment.OnboardingFragment;
+import com.ally.pam.fragment.SlidePageFragment;
 
 /**
  * Created by Ally on 12/2/2015.
  */
-public class OnboradingActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
-    private Gallery imageSwitcher;
+public class OnboradingActivity extends FragmentActivity {
 
     private Button btnStart;
 
     private ImageView ivFist;
     private ImageView ivSecond;
 
+    private ViewPager viewPager;
+    private PagerAdapter mPagerAdapter;
+
+    private int NUM_PAGES = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        imageSwitcher = (Gallery) findViewById(R.id.imageSwitcher);
-        imageSwitcher.setAdapter(new ImageAdapter(this));
-        imageSwitcher.setOnItemSelectedListener(this);
         btnStart = (Button) findViewById(R.id.start_button);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,60 +54,40 @@ public class OnboradingActivity extends Activity implements AdapterView.OnItemSe
         });
         ivFist = (ImageView) findViewById(R.id.onbording_first);
         ivSecond = (ImageView) findViewById(R.id.onbording_second);
+
+        viewPager = (ViewPager) findViewById(R.id.onboarding_viewpager);
+        mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
+        viewPager.setAdapter(mPagerAdapter);
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        ivFist.setImageResource(R.mipmap.onboarding_select);
+                        ivSecond.setImageResource(R.mipmap.onboarding_unselect);
+                        break;
+                    case 1:
+                        ivSecond.setImageResource(R.mipmap.onboarding_select);
+                        ivFist.setImageResource(R.mipmap.onboarding_unselect);
+                        break;
+                }
+            }
+        });
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch (position) {
-            case 0:
-                ivFist.setImageResource(R.mipmap.onboarding_select);
-                ivSecond.setImageResource(R.mipmap.onboarding_unselect);
-                break;
-            case 1:
-                ivSecond.setImageResource(R.mipmap.onboarding_select);
-                ivFist.setImageResource(R.mipmap.onboarding_unselect);
-                break;
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+        public ScreenSlidePagerAdapter(FragmentManager fm) {
+            super(fm);
         }
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-    public class ImageAdapter extends BaseAdapter {
-        public ImageAdapter(Context c) {
-            mContext = c;
+        @Override
+        public Fragment getItem(int position) {
+            return OnboardingFragment.create(position);
         }
 
+        @Override
         public int getCount() {
-            return mImageIds.length;
+            return NUM_PAGES;
         }
-
-        public Object getItem(int position) {
-            return position;
-        }
-
-        public long getItemId(int position) {
-            return position;
-        }
-
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView i = new ImageView(mContext);
-
-//            i.setImageResource(mThumbIds[position]);
-            i.setBackgroundResource(mImageIds[position]);
-            i.setAdjustViewBounds(true);
-            i.setLayoutParams(new Gallery.LayoutParams(
-                    LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
-//            i.setBackgroundResource(R.drawable.picture_frame);
-            return i;
-        }
-
-        private Context mContext;
-
     }
-
-    private Integer[] mImageIds = { R.mipmap.onborading, R.mipmap.onborading };
-
 }

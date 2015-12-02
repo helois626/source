@@ -48,63 +48,28 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="395">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+                android:layout_height="fill_parent"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="RESTAURANT RESERVATION"
                 android:id="@+id/textView43"
                 android:gravity="center"
-                android:layout_weight="125"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/restaurant"
-                android:id="@+id/textView44"
-                android:gravity="center"
-                android:layout_weight="100" />
-
-            <RelativeLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="145"
-                android:paddingTop="10dp">
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:id="@+id/imageView13"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:background="#d2d1d1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/restaurant_date"
-                    android:id="@+id/textView45"
-                    android:gravity="center"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true" />
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:id="@+id/imageView14"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
-                    android:background="#d2d1d1" />
-            </RelativeLayout>
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
 
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/imageView13"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#d2d1d1" />
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -117,10 +82,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/chat_listview"
                 android:layout_weight="690"
-                android:divider="@null"
+                android:divider="@color/textColorPrimary"
                 android:layout_alignParentTop="true"
                 android:layout_above="@+id/editText10"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginBottom="15dp"
+                android:background="#ffffff" />
 
             <EditText
                 android:layout_width="wrap_content"

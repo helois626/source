@@ -9,28 +9,28 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="198"></LinearLayout>
+        android:layout_weight="198"
+        android:orientation="vertical"></LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:src="@mipmap/logo"
-        android:layout_weight="175" />
+        android:layout_weight="175"
+        android:src="@mipmap/logo" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="185" />
+        android:layout_weight="185"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:layout_weight="750"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_weight="750">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -47,47 +47,49 @@
                 android:id="@+id/etusername"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
+                android:layout_weight="155"
                 android:background="@mipmap/text_background"
                 android:ems="10"
                 android:hint="@string/user_name"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:layout_weight="155" />
+                android:textColorHint="#ffffff" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:orientation="vertical"
-                android:layout_weight="70" />
+                android:layout_weight="70"
+                android:orientation="vertical" />
 
             <EditText
                 android:id="@+id/etpassword"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
+                android:layout_weight="155"
                 android:background="@mipmap/text_background"
                 android:ems="10"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:paddingLeft="10dp"
                 android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:layout_weight="155" />
+                android:textColorHint="#ffffff" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:orientation="vertical"
-                android:layout_weight="200" />
+                android:layout_weight="200"
+                android:orientation="vertical" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/lgbtn_signin"
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:background="@mipmap/other_bg"
-                android:layout_weight="170"
-                android:src="@drawable/btn_signin_selector" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector"
+                android:text="SIGN IN"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -100,29 +102,29 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="120" />
+        android:layout_weight="120"
+        android:orientation="vertical" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:src="@mipmap/line_text"
+        android:layout_weight="50"
         android:background="@mipmap/other_bg"
-        android:layout_weight="50" />
+        android:src="@mipmap/line_text" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="70" />
+        android:layout_weight="70"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:layout_weight="280"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_weight="280">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -137,60 +139,56 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
                 android:layout_weight="120"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/btnlinked_in"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:background="@mipmap/other_bg"
                     android:layout_weight="445"
+                    android:background="@mipmap/other_bg"
                     android:src="@drawable/btnlinked_selector" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="100" />
+                    android:layout_weight="100"
+                    android:orientation="vertical" />
 
                 <ImageButton
                     android:id="@+id/btnfacebook"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:background="@mipmap/other_bg"
                     android:layout_weight="445"
+                    android:background="@mipmap/other_bg"
                     android:src="@drawable/btnfb_selector" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight="70" />
+                android:layout_weight="70"
+                android:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
                 android:layout_weight="55"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnforgot"
+                <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="300"
-                    android:gravity="center"
-                    android:src="@drawable/btnforgot_selector"
-                    android:background="@mipmap/other_bg" />
+                    android:text="Forgot password?"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#27ccc0"
+                    android:gravity="left|center" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="50" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -199,16 +197,17 @@
                     android:text="@string/no_account"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="#ffffff"
-                    android:gravity="fill_vertical" />
+                    android:gravity="center" />
 
-                <ImageButton
-                    android:id="@+id/lgbtn_signup"
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/signup_textview"
+                    android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:background="@mipmap/other_bg"
-                    android:layout_weight="135"
+                    android:text="Sign up"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#27ccc0"
                     android:gravity="center"
-                    android:src="@drawable/btnsign_up_selector" />
+                    android:layout_marginLeft="5dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -222,7 +221,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="55" />
+        android:layout_weight="55"
+        android:orientation="vertical" />
 
 </LinearLayout>

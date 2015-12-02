@@ -81,10 +81,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="360"
                 android:background="@mipmap/edittext"
+                android:hint="@string/cvc_cw"
                 android:paddingLeft="10dp"
                 android:textColor="@color/textColorPrimary"
-                android:textColorHint="#efeff4"
-                android:hint="@string/cvc_cw" />
+                android:textColorHint="#efeff4" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,18 +107,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="360"
                 android:background="@mipmap/edittext"
+                android:hint="@string/post_code"
                 android:paddingLeft="10dp"
                 android:textColor="@color/textColorPrimary"
-                android:textColorHint="#efeff4"
-                android:hint="@string/post_code" />
+                android:textColorHint="#efeff4" />
         </LinearLayout>
 
-        <ImageButton
+        <Button
             android:id="@+id/imageButton4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/other_bg"
-            android:src="@drawable/btn_add_payment" />
+            android:layout_height="40dp"
+            android:background="@drawable/btn_blue_selector"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:text="ADD PAYMENT" />
 
     </LinearLayout>
 
