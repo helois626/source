@@ -138,7 +138,7 @@ public class HomeActivity extends ActionBarActivity {
                 mMenu.findItem(R.id.edit).setVisible(false);
                 break;
             case 4:
-                fragment = new EventFragment();
+                fragment = new EventFragment(this);
                 mMenu.findItem(R.id.edit).setVisible(false);
                 break;
             case 5:

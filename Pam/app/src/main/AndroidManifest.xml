@@ -37,6 +37,9 @@
             android:name=".activities.RequestDetailActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activities.OnboradingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".activities.ChatActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"></activity>

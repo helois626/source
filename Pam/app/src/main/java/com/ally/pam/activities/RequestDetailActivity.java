@@ -1,45 +1,33 @@
 package com.ally.pam.activities;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.ally.pam.R;
-import com.ally.pam.adapter.SpinnerAdapter;
-
-import java.util.ArrayList;
+import com.ally.pam.fragment.SlidePageFragment;
 
 /**
  * Created by Ally on 11/30/2015.
  */
-public class RequestDetailActivity extends Activity implements View.OnClickListener {
+public class RequestDetailActivity extends FragmentActivity implements View.OnClickListener {
 
     private ImageView ivBack;
+    private ImageView first;
+    private ImageView second;
 
-    private Button btnPay;
-    private Button btnChat;
+    private ViewPager viewPager;
+    private PagerAdapter mPagerAdapter;
 
-    private Spinner spCardCategory;
-
-    private String[] CARD;
-    private ArrayList<String> arrayListGender;
-
-    private ArrayList<String> arrayListCategory;
-    private ImageButton ibtnAdd;
-
-    private ImageButton ibtnCancel;
-
-    private Button btnDone;
+    private int NUM_PAGES = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +40,43 @@ public class RequestDetailActivity extends Activity implements View.OnClickListe
         ivBack = (ImageView) findViewById(R.id.back_imageview);
         ivBack.setOnClickListener(this);
 
-        btnPay = (Button) findViewById(R.id.request_pay_button);
-        btnChat = (Button) findViewById(R.id.request_chat_button);
-        btnPay.setOnClickListener(this);
-        btnChat.setOnClickListener(this);
+        first = (ImageView) findViewById(R.id.first_imageview);
+        second = (ImageView) findViewById(R.id.second_imageview);
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
+        viewPager.setAdapter(mPagerAdapter);
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        first.setImageResource(R.mipmap.point);
+                        second.setImageResource(R.mipmap.point_unselect);
+                        break;
+                    case 1:
+                        second.setImageResource(R.mipmap.point);
+                        first.setImageResource(R.mipmap.point_unselect);
+                        break;
+                }
+            }
+        });
+    }
+
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+        public ScreenSlidePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return SlidePageFragment.create(position);
+        }
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
     }
 
     @Override
@@ -64,52 +85,6 @@ public class RequestDetailActivity extends Activity implements View.OnClickListe
         switch (id) {
             case R.id.back_imageview:
                 finish();
-                break;
-            case R.id.request_pay_button:
-                final Dialog dialog = new Dialog(this);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setCancelable(false);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-                dialog.setContentView(R.layout.dialog);
-                CARD = getResources().getStringArray(R.array.category);
-                arrayListCategory = new ArrayList<>();
-                for (int i = 0; i < CARD.length; i++) {
-                    arrayListCategory.add(CARD[i]);
-                }
-                spCardCategory = (Spinner) dialog.findViewById(R.id.category_spinner);
-                spCardCategory.setAdapter(new SpinnerAdapter(this, R.layout.spinner_item, arrayListCategory));
-
-                ibtnCancel = (ImageButton) dialog.findViewById(R.id.cancel_Imagebutton);
-                ibtnCancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
-
-                TextView tvDate = (TextView) dialog.findViewById(R.id.date_textview);
-                tvDate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        final Dialog datePicker1 = new Dialog(RequestDetailActivity.this);
-                        datePicker1.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                        datePicker1.setCancelable(false);
-                        datePicker1.setContentView(R.layout.date_picker);
-                        Button btnDone = (Button) datePicker1.findViewById(R.id.done_button);
-                        btnDone.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                datePicker1.dismiss();
-                            }
-                        });
-                        datePicker1.show();
-                    }
-                });
-                dialog.show();
-                break;
-            case R.id.request_chat_button:
-                Intent chat = new Intent(this, ChatActivity.class);
-                startActivity(chat);
                 break;
         }
     }
