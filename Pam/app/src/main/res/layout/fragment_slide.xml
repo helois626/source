@@ -116,14 +116,28 @@
                         android:layout_alignParentTop="true"
                         android:background="#d2d1d1" />
 
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="52$ + TAX"
+                        android:id="@+id/textView57"
+                        android:layout_below="@+id/textView58"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/restaurant_lemeac"
+                        android:id="@+id/textView58"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_below="@+id/imageView12"
                         android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="30dp"
-                        android:src="@mipmap/cost" />
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
                 </RelativeLayout>
             </LinearLayout>
 

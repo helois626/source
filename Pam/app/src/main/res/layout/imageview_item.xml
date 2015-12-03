@@ -4,9 +4,64 @@
     android:layout_height="wrap_content"
     android:background="#f7f7f7">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/item_imageview"
-        android:layout_marginTop="10dp" />
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Hi Phil is it a BYOB Restaurant?"
+            android:id="@+id/textView6"
+            android:background="@mipmap/chat_list_back"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="#ffffff"
+            android:paddingRight="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_imageview1"
+            android:src="@mipmap/user_pic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="31dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Hello. Yes you can bring your\nown bottle"
+            android:id="@+id/textView67"
+            android:background="@mipmap/chat_item_back"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="#ffffff"
+            android:paddingRight="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_imageview"
+            android:src="@mipmap/user_pic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp" />
+    </RelativeLayout>
+
 </LinearLayout>

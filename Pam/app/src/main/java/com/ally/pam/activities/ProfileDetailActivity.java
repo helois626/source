@@ -37,7 +37,7 @@ public class ProfileDetailActivity extends Activity implements View.OnClickListe
     private ArrayList<String> arrayListGender;
 
     private ArrayList<String> arrayListCategory;
-    private ImageButton ibtnAdd;
+    private Button ibtnAdd;
 
     private ImageButton ibtnCancel;
 
@@ -72,7 +72,7 @@ public class ProfileDetailActivity extends Activity implements View.OnClickListe
         spGender = (Spinner) findViewById(R.id.gender_spinner);
         spGender.setAdapter(new GenderSpinnerAdapter(this, R.layout.gender_spinner_item, arrayListGender));
 
-        ibtnAdd = (ImageButton) findViewById(R.id.payment_add_imagebutton);
+        ibtnAdd = (Button) findViewById(R.id.payment_add_imagebutton);
         ibtnAdd.setOnClickListener(this);
     }
 

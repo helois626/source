@@ -138,9 +138,9 @@
                         android:layout_toEndOf="@+id/textView11"
                         android:background="@color/textColorPrimary"
                         android:gravity="left|center"
-                        android:singleLine="true"
-                        android:paddingLeft="5dp"
                         android:hint="@string/big_first_name"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
                         android:textSize="14sp" />
                 </RelativeLayout>
 
@@ -173,9 +173,9 @@
                         android:layout_toEndOf="@+id/textView10"
                         android:background="@color/textColorPrimary"
                         android:gravity="left|center"
-                        android:singleLine="true"
-                        android:paddingLeft="5dp"
                         android:hint="@string/big_last_name"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
                         android:textSize="14sp" />
                 </RelativeLayout>
 
@@ -399,14 +399,17 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/payment_add_imagebutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@mipmap/other_bg"
-                android:src="@drawable/btnpay_add" />
+                android:background="@drawable/btnpay_add"
+                android:text="ADD"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="18sp" />
         </RelativeLayout>
 
         <ListView

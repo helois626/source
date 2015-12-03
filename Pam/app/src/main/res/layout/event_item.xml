@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="18"
+            android:id="@+id/textView61"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:layout_marginStart="26dp"
+            android:layout_below="@+id/imageView10"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView10"
+            android:background="#000000"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView61"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView14"
+            android:background="#000000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView61"
+            android:layout_marginLeft="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/textView61"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/event_item_back"
+            android:id="@+id/relativeLayout2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/user_pic"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hotel Reservation"
+                android:id="@+id/textView62"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Concierge : Phil B."
+                android:id="@+id/textView63"
+                android:layout_below="@+id/textView62"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Time : 8 pm"
+                android:id="@+id/textView64"
+                android:layout_below="@+id/textView63"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Wed"
+            android:id="@+id/textView66"
+            android:layout_below="@+id/textView61"
+            android:layout_alignEnd="@+id/textView61"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</LinearLayout>

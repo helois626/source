@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.ally.pam.activities.NewRequestActivity;
 import com.ally.pam.R;
 import com.ally.pam.adapter.ChatAdapter;
+import com.ally.pam.adapter.EventAdapter;
 
 /**
  * Created by Ally on 11/25/2015.
@@ -25,8 +26,6 @@ public class EventFragment extends Fragment implements View.OnClickListener {
     private ListView listView;
 
     private Context context;
-
-    private int[] IMAGE = {R.mipmap.events_item, R.mipmap.events_item, R.mipmap.events_item};
 
     public EventFragment(Context context) {
         this.context = context;
@@ -42,7 +41,7 @@ public class EventFragment extends Fragment implements View.OnClickListener {
         ibtnAddNew.setOnClickListener(this);
 
         listView = (ListView) rootView.findViewById(R.id.event_listview);
-        listView.setAdapter(new ChatAdapter(context, IMAGE));
+        listView.setAdapter(new EventAdapter(context));
 
         return rootView;
     }

@@ -18,8 +18,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
     private ListView listView;
 
-    int[] IMAGE = {R.mipmap.chat_1, R.mipmap.chat_2, R.mipmap.chat_3, R.mipmap.chat_4};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +31,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         tvDone.setOnClickListener(this);
 
         listView = (ListView) findViewById(R.id.chat_listview);
-        listView.setAdapter(new ChatAdapter(this, IMAGE));
+        listView.setAdapter(new ChatAdapter(this));
     }
 
     @Override

@@ -105,13 +105,39 @@
         android:layout_weight="120"
         android:orientation="vertical" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:background="@mipmap/other_bg"
-        android:src="@mipmap/line_text" />
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:id="@+id/imageView22"
+            android:layout_weight="1"
+            android:background="#c5c6c6" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="OR SIGN IN WITH A SOCIAL ACCOUNT"
+            android:id="@+id/textView56"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:textColor="#c5c6c6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:id="@+id/imageView23"
+            android:layout_weight="1"
+            android:background="#c5c6c6" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
