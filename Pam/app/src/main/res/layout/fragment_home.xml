@@ -64,6 +64,18 @@
             android:layout_weight="265"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="3"
+                android:id="@+id/textView68"
+                android:background="@mipmap/count"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_alignTop="@+id/ibtn_notification"
+                android:layout_alignStart="@+id/ibtn_notification" />
+
             <ImageButton
                 android:id="@+id/ibtn_notification"
                 android:layout_width="wrap_content"
